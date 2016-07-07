@@ -3,17 +3,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>DomenCai&#39;s Blogs</title>
+  <title>Android vector 标签 pathData 详解 | DomenCai&#39;s Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="聪明活泼，乐于助人，成绩优秀，团结同学">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DomenCai's Blogs">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Android Support Library 23.2 出来以后，在Android 5.0(API级别21)以前的系统中，也可以定义矢量drawables，即VectorDrawable。它可以在不失清晰度的情况下进行缩放。你仅仅需要需要一个矢量图片的资源文件，而不再需要为每个屏幕密度设置一个资源文件，在一定程度上可以减小项目的体积。
+vector 标签下的最主要就是 pathData，其实pa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android vector 标签 pathData 详解">
+<meta property="og:url" content="http://yoursite.com/2016/06/24/Android vector 标签 pathData 详解/index.html">
 <meta property="og:site_name" content="DomenCai's Blogs">
-<meta property="og:description" content="聪明活泼，乐于助人，成绩优秀，团结同学">
+<meta property="og:description" content="Android Support Library 23.2 出来以后，在Android 5.0(API级别21)以前的系统中，也可以定义矢量drawables，即VectorDrawable。它可以在不失清晰度的情况下进行缩放。你仅仅需要需要一个矢量图片的资源文件，而不再需要为每个屏幕密度设置一个资源文件，在一定程度上可以减小项目的体积。
+vector 标签下的最主要就是 pathData，其实pa">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1175492-725be47c52e14e61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1175492-043c1978d8aca0ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1175492-b2c1fcf005c6463d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1175492-d45534739c6a0b62?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1175492-6b58a1da6d923644?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1175492-5871e206b7b0338d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1175492-bdcb5a670356000a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1175492-2898c8cbf6a70b1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1175492-5002566d79577e1e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1175492-c8286ca7cfdc543c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-07-07T01:39:53.008Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DomenCai's Blogs">
-<meta name="twitter:description" content="聪明活泼，乐于助人，成绩优秀，团结同学">
+<meta name="twitter:title" content="Android vector 标签 pathData 详解">
+<meta name="twitter:description" content="Android Support Library 23.2 出来以后，在Android 5.0(API级别21)以前的系统中，也可以定义矢量drawables，即VectorDrawable。它可以在不失清晰度的情况下进行缩放。你仅仅需要需要一个矢量图片的资源文件，而不再需要为每个屏幕密度设置一个资源文件，在一定程度上可以减小项目的体积。
+vector 标签下的最主要就是 pathData，其实pa">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1175492-725be47c52e14e61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternate" href="/atom.xml" title="DomenCai&#39;s Blogs" type="application/atom+xml">
   
@@ -62,54 +77,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/06/hello-world/" class="article-date">
-  <time datetime="2016-07-06T09:25:58.885Z" itemprop="datePublished">2016-07-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/06/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/06/hello-world/" data-id="ciqbngtfs0000n0f0618c572d" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Android vector 标签 pathData 详解" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Android vector 标签 pathData 详解" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/06/24/Android vector 标签 pathData 详解/" class="article-date">
   <time datetime="2016-06-24T04:55:29.000Z" itemprop="datePublished">2016-06-24</time>
@@ -126,8 +94,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/24/Android vector 标签 pathData 详解/">Android vector 标签 pathData 详解</a>
+    <h1 class="article-title" itemprop="name">
+      Android vector 标签 pathData 详解
     </h1>
   
 
@@ -188,10 +156,23 @@
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/06/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
+</article>
 
 </section>
         
