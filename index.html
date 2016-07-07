@@ -51,11 +51,17 @@
   
 
   
+    
+      
+    
+
+    
+  
 
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -199,16 +205,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
 
       
     </ul>
@@ -314,7 +310,7 @@
             <p><a href="http://www.jianshu.com/p/8102e912d752" target="_blank" rel="external">Android Support Library 23.2</a> 出来以后，在Android 5.0(API级别21)以前的系统中，也可以定义矢量drawables，即<a href="https://developer.android.com/reference/android/graphics/drawable/VectorDrawable.html" target="_blank" rel="external">VectorDrawable</a>。它可以在不失清晰度的情况下进行缩放。你仅仅需要需要一个矢量图片的资源文件，而不再需要为每个屏幕密度设置一个资源文件，在一定程度上可以减小项目的体积。</p>
 <p>vector 标签下的最主要就是 pathData，其实pathData跟Android中 <a href="http://developer.android.com/reference/android/graphics/Path.html" target="_blank" rel="external">Path</a> api对路径的定义规则是差不多的，当你掌握了 pathData 的语法，同时有一颗不轻易放弃的心，就可以通过一些简洁的指令完成几乎所有的图案。</p>
 <p>越是复杂的东西往往越有规律可循。下面就来详细说说pathData 的语法。给我五！<br><img src="http://upload-images.jianshu.io/upload_images/1175492-725be47c52e14e61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="give me five.png"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;!--上面的手掌对应的代码实现--&gt;</div><div class="line">&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">        android:width=&quot;24dp&quot;</div><div class="line">        android:height=&quot;24dp&quot;</div><div class="line">        android:viewportWidth=&quot;24&quot;</div><div class="line">        android:viewportHeight=&quot;24&quot;&gt;</div><div class="line">    &lt;path</div><div class="line">        android:fillColor=&quot;#000000&quot;</div><div class="line">        android:pathData=&quot;</div><div class="line">            M22,23 q0,4 -4,4 h-7 q-2,0 -3,-1 T1,16 q-0.6,-0.8 0,-2 t5,3</div><div class="line">            q1,1 2,0 T8,4 q0,-1 0.9,-1.1 t1.1,1 1.5,9 q0.25,0.5 0.5,0.5</div><div class="line">            t0.5,-0.5 0,-11 q0.2,-1 1.1,-1.1 t1.1,1.1 1,11 q0.25,0.5 0.5,0.5</div><div class="line">            t0.5,-0.5 0.5,-9 q0.2,-1 1,-1 t1,1 0.5,9 q0.25,0.5 0.5,0.5</div><div class="line">            t0.5,-0.5 1.2,-6.5 q0.3,-1 1,-1 t0.8,1 -0.8,6 T22,23&quot;/&gt;</div><div class="line">&lt;/vector&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--上面的手掌对应的代码实现--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">vector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">        <span class="attr">android:width</span>=<span class="string">"24dp"</span></div><div class="line">        <span class="attr">android:height</span>=<span class="string">"24dp"</span></div><div class="line">        <span class="attr">android:viewportWidth</span>=<span class="string">"24"</span></div><div class="line">        <span class="attr">android:viewportHeight</span>=<span class="string">"24"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">path</span></span></div><div class="line">        <span class="attr">android:fillColor</span>=<span class="string">"#000000"</span></div><div class="line">        <span class="attr">android:pathData</span>=<span class="string">"</span></div><div class="line">            M22,23 q0,4 -4,4 h-7 q-2,0 -3,-1 T1,16 q-0.6,-0.8 0,-2 t5,3</div><div class="line">            q1,1 2,0 T8,4 q0,-1 0.9,-1.1 t1.1,1 1.5,9 q0.25,0.5 0.5,0.5</div><div class="line">            t0.5,-0.5 0,-11 q0.2,-1 1.1,-1.1 t1.1,1.1 1,11 q0.25,0.5 0.5,0.5</div><div class="line">            t0.5,-0.5 0.5,-9 q0.2,-1 1,-1 t1,1 0.5,9 q0.25,0.5 0.5,0.5</div><div class="line">            t0.5,-0.5 1.2,-6.5 q0.3,-1 1,-1 t0.8,1 -0.8,6 T22,23"/&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">vector</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="基本规则"><a href="#基本规则" class="headerlink" title="基本规则"></a>基本规则</h4><p>pathData 的指令基本都是由字母跟若干数字组成，数字之间可以用空格或者逗号隔开 (其实逗号会被忽略掉，加上逗号只是一些习惯的问题)。一般来说指令字母分为大小写两种,<strong>大写的字母是基于原点的坐标系(偏移量)，即绝对位置；小写字母是基于当前点坐标系(偏移量)，即相对位置。</strong></p>
 <h4 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h4><ul>
 <li><strong>M x,y (m dx, dy)</strong> 移动虚拟画笔到对应的点，但是并不绘制。一开始的时候默认是在(0,0)。  </li>
@@ -324,19 +320,20 @@
 <li><strong>H x (h dx)</strong>  从当前点绘制水平线，相当于l x,0</li>
 <li><strong>V y (v dy)</strong>  从当前点绘制垂直线，相当于l 0,y  </li>
 </ul>
-<pre><code>&lt;!--下面的例子除了 pathData, 其他跟此文件一样--&gt;
-&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-        android:width=&quot;24dp&quot;
-        android:height=&quot;24dp&quot;
-        android:viewportWidth=&quot;24&quot;
-        android:viewportHeight=&quot;24&quot;&gt;
-    &lt;path
-        android:fillColor=&quot;#0000&quot;
-        android:strokeColor=&quot;#000&quot;
-        android:strokeWidth=&quot;0.2&quot;
-        android:pathData=&quot; M10,10 L10,15 L15,15 L10,10&quot;/&gt;
-&lt;/vector&gt;
-</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1175492-043c1978d8aca0ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="直线"><br>将上述代码 <code>android:pathData=&quot; M10,10 L10,15 L15,15 L10,10&quot;</code> 替换成以下代码效果相同  </p>
+<pre><code class="xml"><span class="comment">&lt;!--下面的例子除了 pathData, 其他跟此文件一样--&gt;</span>
+<span class="tag">&lt;<span class="name">vector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>
+        <span class="attr">android:width</span>=<span class="string">"24dp"</span>
+        <span class="attr">android:height</span>=<span class="string">"24dp"</span>
+        <span class="attr">android:viewportWidth</span>=<span class="string">"24"</span>
+        <span class="attr">android:viewportHeight</span>=<span class="string">"24"</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">path</span>
+        <span class="attr">android:fillColor</span>=<span class="string">"#0000"</span>
+        <span class="attr">android:strokeColor</span>=<span class="string">"#000"</span>
+        <span class="attr">android:strokeWidth</span>=<span class="string">"0.2"</span>
+        <span class="attr">android:pathData</span>=<span class="string">" M10,10 L10,15 L15,15 L10,10"</span>/&gt;</span>
+<span class="tag">&lt;/<span class="name">vector</span>&gt;</span>
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/1175492-043c1978d8aca0ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="直线"><br>将上述代码 <code>android:pathData=&quot; M10,10 L10,15 L15,15 L10,10&quot;</code> 替换成以下代码效果相同  </p>
 <pre><code>android:pathData=&quot;M10,10 l 0,5 l 5,0 l-5,-5&quot;  
 android:pathData=&quot;M10,10 V 15 H 15 L10,10&quot;  
 android:pathData=&quot;M10,10 v 5 h 5 l-5,-5&quot;
@@ -355,7 +352,10 @@ android:pathData=&quot;M10,10 v 5 h 5 l-5,-5&quot;
 <p><img src="http://upload-images.jianshu.io/upload_images/1175492-c3e722abe817f717.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="弧线 （大弧，顺时针）">  </p>
 <p>红色(8,10) 是起点， X轴旋转的角度为0，取大弧，顺时针，蓝色(14,16) 是终点。</p>
 <ul>
-<li>只将 x-axis-rotation 改为30跟-30分别对应下面左边跟右边的效果，可见正数是按顺时针旋转负数按逆时针旋转。<br><img src="http://upload-images.jianshu.io/upload_images/1175492-8f6c17cfffecb5f0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="x-axis-rotation为30（左）、-30（右）"></li>
+<li>只将 x-axis-rotation 改为30跟-30分别对应下面左边跟右边的效果，可见正数是按顺时针旋转负数按逆时针旋转。  </li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1175492-8f6c17cfffecb5f0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="x-axis-rotation为30（左）、-30（右）"></p>
+<ul>
 <li>只将 large-arc-flag 改为 0 <code>android:pathData=&quot;M8,10 a4,6 0 0,1 6 6&quot;</code> 对应下图效果</li>
 </ul>
 <p><img src="http://upload-images.jianshu.io/upload_images/1175492-ce86320fe7a69d1c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="large-arc-flag 为 0"></p>
@@ -390,42 +390,45 @@ android:pathData=&quot;M4,10 c2,-4 4,4 6,0 s4,4 6,0&quot;
 </code></pre><p>以上四个均会出现下图的效果<br><img src="http://upload-images.jianshu.io/upload_images/1175492-5871e206b7b0338d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="三阶贝塞尔">  </p>
 <h4 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h4><p>终于把所有的指令搞清楚啦，那么接下来就来画一个比较简单的图案吧（为了一次性涉及几乎所有的指令，大家就别在意图画的很丑啦） </p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1175492-bdcb5a670356000a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>首先分析一下这个图的构成。它是一个圆角正方形同时里面有一个镂空的心型。先来看看正方形  </p>
-<pre><code>&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-        android:width=&quot;24dp&quot;
-        android:height=&quot;24dp&quot;
-        android:viewportWidth=&quot;40&quot;
-        android:viewportHeight=&quot;40&quot;&gt;
+<pre><code class="xml"><span class="tag">&lt;<span class="name">vector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>
+        <span class="attr">android:width</span>=<span class="string">"24dp"</span>
+        <span class="attr">android:height</span>=<span class="string">"24dp"</span>
+        <span class="attr">android:viewportWidth</span>=<span class="string">"40"</span>
+        <span class="attr">android:viewportHeight</span>=<span class="string">"40"</span>&gt;</span>
 
-    &lt;path
-        android:fillColor=&quot;#f24e4e&quot;
-        android:pathData=&quot;M8,4
+    <span class="tag">&lt;<span class="name">path</span>
+        <span class="attr">android:fillColor</span>=<span class="string">"#f24e4e"</span>
+        <span class="attr">android:pathData</span>=<span class="string">"M8,4
             h24 q4,0 4,4 v24 q0,4 -4,4
-            h-24 q-4,0 -4,-4 v-24 q0,-4 4,-4&quot;/&gt;
-&lt;/vector&gt;
-</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1175492-2898c8cbf6a70b1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>细心的同学应该注意到这里没有设置strokeColor，strokeWidth，并且fillColor也不再设置透明了，所以出现的是没有边框的填充效果。上面viewportWidth为40，则把这张图分成40个单位。  </p>
+            h-24 q-4,0 -4,-4 v-24 q0,-4 4,-4"</span>/&gt;</span>
+<span class="tag">&lt;/<span class="name">vector</span>&gt;</span>
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/1175492-2898c8cbf6a70b1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>细心的同学应该注意到这里没有设置strokeColor，strokeWidth，并且fillColor也不再设置透明了，所以出现的是没有边框的填充效果。上面viewportWidth为40，则把这张图分成40个单位。  </p>
 <p>在pathData中，首先移动到A(8,4)，然后水平移动了24个单位到B(32,4)。接着就是一条二阶贝塞尔曲线，起点是B，控制点是C(36,4)，终点是D(36,8)。然后再画一条垂直线到(36,32)…下面的操作都是差不多，就不多说的。这里注意一点，画这个正方形是从A-B-C-D，也就是顺时针的方向，这点对接下来画心型很重要。  </p>
 <p>画完了圆角正方形，接下来就要画一个镂空的心型。有同学说再加上一个path标签，设置不同颜色就可以。这方法乍一看挺不错，但是他实现的并不是镂空的效果，而是叠加的效果。镂空的话中间的心型是透明的，但是叠加就没办法让中间的心呈透明。  </p>
 <p>那怎么实现镂空的效果呢？其实关键就是前面说的方向。前面的正方形是顺时针的方向，如果我们在pathData 后面加上另一逆时针方向的路径，就会出现取反的效果，比如  </p>
-<pre><code>&lt;path
-    android:fillColor=&quot;#f24e4e&quot;
-    android:pathData=&quot;M8,4
+<pre><code class="xml"><span class="tag">&lt;<span class="name">path</span>
+    <span class="attr">android:fillColor</span>=<span class="string">"#f24e4e"</span>
+    <span class="attr">android:pathData</span>=<span class="string">"M8,4
         h24 q4,0 4,4 v24 q0,4 -4,4
         h-24 q-4,0 -4,-4 v-24 q0,-4 4,-4
-        M2,20 h20 v-10 z&quot;/&gt;
-</code></pre><p>在刚才的基础上加上<code>M2,20 h20 v-10 z</code> ，这是一个逆时针方向的三角形，会变成下面这样  </p>
+        M2,20 h20 v-10 z"</span>/&gt;</span>
+</code></pre>
+<p>在刚才的基础上加上<code>M2,20 h20 v-10 z</code> ，这是一个逆时针方向的三角形，会变成下面这样  </p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1175492-5002566d79577e1e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">  </p>
 <p>也就是说，我们只需要画一个逆时针方向的心型，就会出现上面的那个效果。先看看代码  </p>
-<pre><code>&lt;path
-    android:fillColor=&quot;#f24e4e&quot;
-    android:pathData=&quot;M8,4
+<pre><code class="xml"><span class="tag">&lt;<span class="name">path</span>
+    <span class="attr">android:fillColor</span>=<span class="string">"#f24e4e"</span>
+    <span class="attr">android:pathData</span>=<span class="string">"M8,4
         h24 q4,0 4,4 v24 q0,4 -4,4
         h-24 q-4,0 -4,-4 v-24 q0,-4 4,-4
         M20,15
         a5,6 -15 0 0 -9,2
         c0,5 4,6 9,12
         c5,-6 9,-7 9,-12
-        a5,6 15 0 0 -9 -2&quot;/&gt;
-</code></pre><p>这个是在正方形的基础上加上  </p>
+        a5,6 15 0 0 -9 -2"</span>/&gt;</span>
+</code></pre>
+<p>这个是在正方形的基础上加上  </p>
 <pre><code>M20,15
 a5,6 -15 0 0 -9,2
 c0,5 4,6 9,12
@@ -435,23 +438,24 @@ a5,6 15 0 0 -9 -2
 <p><img src="http://upload-images.jianshu.io/upload_images/1175492-c8286ca7cfdc543c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">  </p>
 <p>果然很漂亮。首先它从白色的点 (20,15)开始，向逆时针方向，也就是右边画了一段圆弧到蓝色的点(11,17)，圆弧所在的椭圆逆时针转15°，取短弧，逆时针。然后再画一条三阶贝塞尔曲线，控制点分别是黄点(11,22)，黑点(15,23)，终点是绿色的点(20, 29)。这样子就完成了心型的一半了。另一半跟这边的完全对称，也就不细说了。  </p>
 <p>完整代码  </p>
-<pre><code>&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-        android:width=&quot;24dp&quot;
-        android:height=&quot;24dp&quot;
-        android:viewportWidth=&quot;40&quot;
-        android:viewportHeight=&quot;40&quot;&gt;
-    &lt;path
-        android:fillColor=&quot;#f24e4e&quot;
-        android:pathData=&quot;M8,4
+<pre><code class="xml"><span class="tag">&lt;<span class="name">vector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>
+        <span class="attr">android:width</span>=<span class="string">"24dp"</span>
+        <span class="attr">android:height</span>=<span class="string">"24dp"</span>
+        <span class="attr">android:viewportWidth</span>=<span class="string">"40"</span>
+        <span class="attr">android:viewportHeight</span>=<span class="string">"40"</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">path</span>
+        <span class="attr">android:fillColor</span>=<span class="string">"#f24e4e"</span>
+        <span class="attr">android:pathData</span>=<span class="string">"M8,4
         h24 q4,0 4,4 v24 q0,4 -4,4
         h-24 q-4,0 -4,-4 v-24 q0,-4 4,-4
         M20,15
         a5,6 -15 0 0 -9,2
         c0,5 4,6 9,12
         c5,-6 9,-7 9,-12
-        a5,6 15 0 0 -9 -2&quot;/&gt;
-&lt;/vector&gt;
-</code></pre><h4 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h4><p>网上很多介绍VectorDrawable，但是介绍pathData的真的有点少。我也是通过查阅大量的资料，加上实践，基本算对pathData语法入门了吧，这东西掌握了真的不难，还可以装逼哈哈。这篇博客写的时间真的有点长，整整一天，第一写很多不懂的，希望大家多多指教。有机会再写一下Animated Vector Drawables。  </p>
+        a5,6 15 0 0 -9 -2"</span>/&gt;</span>
+<span class="tag">&lt;/<span class="name">vector</span>&gt;</span>
+</code></pre>
+<h4 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h4><p>网上很多介绍VectorDrawable，但是介绍pathData的真的有点少。我也是通过查阅大量的资料，加上实践，基本算对pathData语法入门了吧，这东西掌握了真的不难，还可以装逼哈哈。这篇博客写的时间真的有点长，整整一天，第一写很多不懂的，希望大家多多指教。有机会再写一下Animated Vector Drawables。  </p>
 <hr>
 <p><strong>感谢阅读到这里的你</strong></p>
 
@@ -544,6 +548,35 @@ a5,6 15 0 0 -9 -2
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/DomenCai" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/cdm665645?is_hot=1" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/users/ffc32e2617e0/latest_articles" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
           
         </div>
 
