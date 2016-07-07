@@ -15,7 +15,8 @@ vector 标签下的最主要就是 pathData，其实pa">
 <meta property="og:description" content="Android Support Library 23.2 出来以后，在Android 5.0(API级别21)以前的系统中，也可以定义矢量drawables，即VectorDrawable。它可以在不失清晰度的情况下进行缩放。你仅仅需要需要一个矢量图片的资源文件，而不再需要为每个屏幕密度设置一个资源文件，在一定程度上可以减小项目的体积。
 vector 标签下的最主要就是 pathData，其实pa">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1175492-725be47c52e14e61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-07-07T04:15:33.497Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1175492-043c1978d8aca0ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-07-07T04:20:13.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="test">
 <meta name="twitter:description" content="Android Support Library 23.2 出来以后，在Android 5.0(API级别21)以前的系统中，也可以定义矢量drawables，即VectorDrawable。它可以在不失清晰度的情况下进行缩放。你仅仅需要需要一个矢量图片的资源文件，而不再需要为每个屏幕密度设置一个资源文件，在一定程度上可以减小项目的体积。
@@ -250,9 +251,24 @@ vector 标签下的最主要就是 pathData，其实pa">
 <h4 id="直线"><a href="#直线" class="headerlink" title="直线"></a>直线</h4><ul>
 <li><strong>L x,y (l dx, dy)</strong> 从当前点划一条直线到对应的点。</li>
 <li><strong>H x (h dx)</strong>  从当前点绘制水平线，相当于l x,0</li>
-<li><strong>V y (v dy)</strong>  从当前点绘制垂直线，相当于l 0,y  </li>
+<li><strong>V y (v dy)</strong>  从当前点绘制垂直线，相当于l 0,y  <pre><code>&lt;!--下面的例子除了 pathData, 其他跟此文件一样--&gt;
+&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+      android:width=&quot;24dp&quot;
+      android:height=&quot;24dp&quot;
+      android:viewportWidth=&quot;24&quot;
+      android:viewportHeight=&quot;24&quot;&gt;
+  &lt;path
+      android:fillColor=&quot;#0000&quot;
+      android:strokeColor=&quot;#000&quot;
+      android:strokeWidth=&quot;0.2&quot;
+      android:pathData=&quot; M10,10 L10,15 L15,15 L10,10&quot;/&gt;
+&lt;/vector&gt;
+</code></pre><img src="http://upload-images.jianshu.io/upload_images/1175492-043c1978d8aca0ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="直线"><br>将上述代码 <code>android:pathData=&quot; M10,10 L10,15 L15,15 L10,10&quot;</code> 替换成以下代码效果相同  </li>
 </ul>
-
+<pre><code>android:pathData=&quot;M10,10 l 0,5 l 5,0 l-5,-5&quot;  
+android:pathData=&quot;M10,10 V 15 H 15 L10,10&quot;  
+android:pathData=&quot;M10,10 v 5 h 5 l-5,-5&quot;
+</code></pre><h4 id="闭合"><a href="#闭合" class="headerlink" title="闭合"></a>闭合</h4>
       
     </div>
     
